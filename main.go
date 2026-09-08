@@ -167,6 +167,7 @@ func restart() {
 func update() {
 	fmt.Println("Updating template store...")
 	configDir, err := os.UserConfigDir()
+	configDir = filepath.Join(configDir, "genignore")
 
 	fmt.Println("Clearing template store...")
 	err = os.RemoveAll(configDir)
